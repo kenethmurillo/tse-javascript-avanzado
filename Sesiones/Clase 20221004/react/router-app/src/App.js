@@ -1,20 +1,20 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Layout";
+import Blogs from "./pages/Blogs";
+import Contact from "./pages/Contact";
+import NoPage from "./pages/NoPage";
+
 function App() {
   return (
-
     <BrowserRouter>
-      <div>
-        <Link to="/">Main Page</Link>
-        <Link to="/page-one"></Link>
-        <Link to="/page-two"></Link>
-      </div>
       <Routes>
-        <Route path="/page-two" element={<h1> Pagina Dos</h1>} />
-        <Route path="/page-one" element={<h1> Pagina Uno</h1>} />
-        <Route path="/" element={<h1> Pagina Principal</h1>} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
