@@ -13,10 +13,23 @@ const PeopleContainer = () => {
     >
       {(size) =>
         size.small ? (
-
-        ): (
-
-          )
+          <Switch>
+            <Route path="/people/:id">
+              <Person />
+            </Route>
+            <PeopleList />
+          </Switch>
+        ) : (
+          <div style={{ display: 'flex' }}>
+            <PeopleList />
+            <Switch>
+              <Route path="/people/:id">
+                <Person />
+              </Route>
+              <Redirect to={`/people/${people[0].id}`} />
+            </Switch>
+          </div>
+        )
       }
     </Media>
   )
