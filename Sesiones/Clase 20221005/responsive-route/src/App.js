@@ -8,7 +8,7 @@ function App() {
                 <Route path="/people">
                     <PeopleContainer />
                 </Route>
-                <Link to="{/people}">People</Link>
+                <Link to="/people">People</Link>
             </Switch>
         </BrowserRouter>
     )
