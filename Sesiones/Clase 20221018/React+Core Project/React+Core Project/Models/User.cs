@@ -1,4 +1,4 @@
-namespace react_dotnet_example.Models
+namespace React_Core_Project.Models
 {
     public class UserModel
     {

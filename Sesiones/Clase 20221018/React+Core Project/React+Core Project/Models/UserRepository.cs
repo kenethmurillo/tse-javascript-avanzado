@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-
-namespace react_dotnet_example.Models
+namespace React_Core_Project.Models
 {
     public class UserRepository: IUserRepository
     {
