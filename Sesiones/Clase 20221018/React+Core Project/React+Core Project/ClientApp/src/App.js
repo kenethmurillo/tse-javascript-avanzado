@@ -52,8 +52,7 @@ class App extends Component {
           <div className="row">
             <div className="col-md-8">
                 <CreateUser
-                  onChangeForm={this.onChangeForm}
-                  createUser={this.createUser}
+                  onChangeForm={this.onChangeForm} createUser={this.createUser}
                   >
                 </CreateUser>
             </div>
